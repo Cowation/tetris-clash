@@ -8,6 +8,16 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554c83a8661bf358" async="async"></script>-->
+  <script>
+    var doubleTouchStartTimestamp = 0;
+    document.addEventListener("touchstart", function(event){
+    var now = +(new Date());
+    if (doubleTouchStartTimestamp + 500 > now){
+        event.preventDefault();
+    };
+    doubleTouchStartTimestamp = now;
+  </script>
+});
 </head>
 <body>
 <!--<canvas id="bg"></canvas>-->
