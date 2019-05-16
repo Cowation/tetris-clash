@@ -28,7 +28,9 @@
     font-style: normal;
 }
 
-
+body {
+    touch-action: manipulation;
+}
 
 .material-icons {
   font-family: 'Material Icons';
